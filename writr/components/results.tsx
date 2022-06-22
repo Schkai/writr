@@ -1,6 +1,6 @@
 const Results: React.FC<ResultProps> = (props) => {
     const keywordsElement = props.keywords.map((keyword, index) => {
-        return <div key={index}>{keyword}</div>;
+        return <div key={index}>#{keyword}</div>;
     });
 
     return (
