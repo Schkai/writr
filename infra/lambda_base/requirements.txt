@@ -1,0 +1,6 @@
+fastapi
+openai
+mangum
+requests
+python-dotenv==0.10.1
+numpy == 1.16.1
