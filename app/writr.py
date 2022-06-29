@@ -29,10 +29,10 @@ def validate_prompt(prompt: str) -> bool:
 def generate_keywords(prompt: str) -> List[str]:
     openai.api_key = os.getenv("OPENAI_API_KEY")
 
-    enriched_prompt = f"Generate related branding keywords for {prompt}"
+    enriched_prompt = f"Create marketing keywords for {prompt}"
     print(enriched_prompt+":")
     response = openai.Completion.create(
-        model="text-davinci-002", prompt=prompt, max_tokens=50)
+        model="text-curie-001", prompt=prompt, max_tokens=50, temperature=0.9)
 
     # Extract text
     keywords_text: str = response["choices"][0]["text"]
@@ -49,10 +49,10 @@ def generate_keywords(prompt: str) -> List[str]:
 def generate_snippet(prompt: str):
     openai.api_key = os.getenv("OPENAI_API_KEY")
 
-    enriched_prompt = f"Generate short branding slogan for {prompt}"
+    enriched_prompt = f"Create a short marketing slogan for {prompt}"
     print(enriched_prompt+":")
     response = openai.Completion.create(
-        model="text-davinci-002", prompt=prompt, max_tokens=50)
+        model="text-curie-001", prompt=prompt, max_tokens=60, temperature=0.9)
 
     # Extract text
     copywrite_text: str = response["choices"][0]["text"].replace('\n', '')

@@ -5,27 +5,36 @@ const Results: React.FC<ResultProps> = (props) => {
 
     return (
         <>
-            <div>
-                <div>
-                    <div>
-                        <b>Prompt</b>
+            <div className="card w-96 bg-base-100 shadow-xl">
+                <div className="card-body">
+                    <div className="mb-10">
+                        <div>
+                            <div className="mb-1">
+                                <b>Prompt</b>
+                            </div>
+                            <div className="mb-3">{props.prompt}</div>
+                        </div>
+                        <div>
+                            <div className="mb-1">
+                                <b>Snippet</b>
+                            </div>
+                            <div className="mb-3">{props.snippet}</div>
+                        </div>
+                        <div className="mb-1">
+                            <div className="mb-3">
+                                <b>Keywords:</b>
+                            </div>
+                            {keywordsElement}
+                        </div>
                     </div>
-                    <div>{props.prompt}</div>
-                </div>
-                <div>
-                    <div>
-                        <b>Snippet</b>
-                    </div>
-                    <div>{props.snippet}</div>
-                </div>
-                <div>
-                    <div>
-                        <b>Keywords:</b>
-                    </div>
-                    {keywordsElement}
+                    <button
+                        className="btn btn-secondary"
+                        onClick={props.onBack}
+                    >
+                        Back
+                    </button>
                 </div>
             </div>
-            <button onClick={props.onBack}>Back</button>
         </>
     );
 };

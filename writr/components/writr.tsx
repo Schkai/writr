@@ -55,10 +55,12 @@ const Writr: React.FC = () => {
     }
 
     return (
-        <>
-            <h1>Writr! </h1>
-            {shownElement}
-        </>
+        <div className="h-screen flex">
+            <div className="max-w-md m-auto p-3">
+                <h1 className="text-3xl underline mb-6">Writr! </h1>
+                {shownElement}
+            </div>
+        </div>
     );
 };
 
