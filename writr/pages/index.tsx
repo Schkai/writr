@@ -10,21 +10,11 @@ const Home: NextPage = () => {
                 <title>Writr | AI Copywriting</title>
                 <meta
                     name="description"
-                    content="Generate weird texts using AI."
+                    content="Generate weird marketing texts using AI."
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Writr></Writr>
-
-            <footer className={styles.footer}>
-                <a
-                    href="https://openai.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Powered by OpenAI
-                </a>
-            </footer>
         </div>
     );
 };

@@ -29,7 +29,7 @@ def validate_prompt(prompt: str) -> bool:
 def generate_keywords(prompt: str) -> List[str]:
     openai.api_key = os.getenv("OPENAI_API_KEY")
 
-    enriched_prompt = f"Create marketing keywords for {prompt}"
+    enriched_prompt = f"Create comma seperated marketing keywords for {prompt}"
     print(enriched_prompt+":")
     response = openai.Completion.create(
         model="text-curie-001", prompt=prompt, max_tokens=50, temperature=0.9)

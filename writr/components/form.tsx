@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 const Form: React.FC<FormProps> = (props) => {
     const checkValidPrompt = props.prompt.length < props.limit;
     const updatePromptValue = (text: string) => {
