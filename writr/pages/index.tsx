@@ -1,5 +1,4 @@
 import type { NextPage } from 'next';
-import { Html } from 'next/document';
 import Head from 'next/head';
 import Writr from '../components/writr';
 import styles from '../styles/Home.module.css';
